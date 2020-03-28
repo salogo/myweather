@@ -3,7 +3,9 @@ import React from 'react';
 import './App.css';
 import Form from "./components/Form";
 import Weather from "./components/Weather";
-import Title from "./components/Title"
+import Title from "./components/Title";
+
+
 
 
 
@@ -53,18 +55,31 @@ this.setState({
 
  render() {
   return (
-    <div>
-      <Title />
-      <Form getWeather={this.getWeather} />
-      <Weather 
-      temperature={this.state.temperature}
-      city={this.state.city}
-      country={this.state.country}
-      humidity={this.state.humidity}
-      description={this.state.description}
-      error={this.state.error}
-      />
+    
+    <div className="container-fluid" >
+     
+        <div className="row" > 
+            <div className="col-md-6" > 
+                  <Title />
+                  <Form getWeather={this.getWeather} />
+                   <Weather 
+                      temperature={this.state.temperature}
+                       city={this.state.city}
+                         country={this.state.country}
+                          humidity={this.state.humidity}
+                          description={this.state.description}
+                         error={this.state.error}
+                          />
+           </div> 
+       
+                         
+                         
+       </div>
     </div>
+
+                   
+
+                  
   );
 }
 };
